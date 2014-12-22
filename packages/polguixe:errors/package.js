@@ -15,7 +15,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('polguixe:errors');
-  api.addFiles('polguixe:errors-tests.js');
+  api.use('tinytest','client');
+  api.use('polguixe:errors','client');
+  api.addFiles('polguixe:errors_tests.js','client');
 });
