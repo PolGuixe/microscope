@@ -3,8 +3,12 @@ Meteor.publish('posts', function(options){
     sort: Object,
     limit: Number
   });
-  
   return  Posts.find({}, options);
+});
+
+Meteor.publish('singlePost', function(id){
+  check(id, String);
+  return Posts.findOne(id);
 });
 
 Meteor.publish('comments', function(postId){
