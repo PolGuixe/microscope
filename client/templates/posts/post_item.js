@@ -17,7 +17,7 @@ Template.postItem.helpers({
   }
 });
 
-Template.postItem.evetns({
+Template.postItem.events({
   'click .upvotable': function(e){
     e.preventDefault();
     Meteor.call('upvote',this._id);
